@@ -1,0 +1,135 @@
+.header {
+    display: block;
+    position: relative;
+    animation: fadein .8s ease;
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        &__left {
+            display: flex;
+            align-items: center;
+            .menu-stack {
+                text-align: center;
+                &::after {
+                    content: "menu";
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: "Oswald", sans-serif;
+                }
+                span {
+                    width: 48px;
+                    height: 8px;
+                    background: #fff;
+                    border-radius: 4px;
+                    display: block;
+                    margin: 6px auto 6px;
+                }
+            }
+            .primary-nav {
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                min-height: 400px;
+                animation: fadein 1s ease;
+                background-color: #ffffff;
+                z-index: 100;
+                display: none;
+                visibility: hidden;
+                margin: 0 -15px;
+                ul {
+                    padding: 24px 0;
+                    li {
+                        margin-left: 62px;
+                        width: 75%;
+                        padding-left: 1.618em;
+                        border-bottom: 1px solid #365473;
+                        a {
+                            display: block;
+                            text-transform: uppercase;
+                            font-family: "Oswald", sans-serif;
+                            color: #365473;
+                            font-size: 4.25em;
+                        }
+                    }
+                }
+                &.menu-show {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+            .logo {
+                margin-left: 70px;
+                font-family: "Oswald", sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                display: inline-block;
+                letter-spacing: 2px;
+                &-name {
+                    span {
+                        &:first-child {
+                            color: #ffffff;
+                            font-size: 1.9em;
+                            display: block;
+                            line-height: 1em;
+                        }
+                        &:last-child {
+                            color: #ffffff;
+                            font-size: 2.6em;
+                            display: block;
+                            line-height: 1em;
+                        }
+                    }
+                }
+                &-address {
+                    display: block;
+                    margin-top: 9px;
+                    font-family: "Oswald", sans-serif;
+                    letter-spacing: 1px;
+                    font-size: 1.125em;
+                    color: #d4d5d6;
+                    a {
+                        color: #d4d5d6;
+                    }
+                }
+            }
+        }
+        &__right {
+            display: flex;
+            align-items: center;
+            .partner-logo {
+                display: flex;
+                align-items: center;
+                a {
+                    img {
+                        max-width: 100px;
+                    }
+                }
+                .divider {
+                    height: 35px;
+                    width: 1px;
+                    margin: 0px 40px;
+                    background-color: #a0a0a0;
+                }
+            }
+            .reserve {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                background: #c4564b;
+                text-align: center;
+                font-family: "Oswald", sans-serif;
+                font-weight: 400;
+                line-height: 100px;
+                font-size: 20px;
+                padding: 0 50px;
+                margin-left: 80px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all .8s ease;
+            }
+        }
+    }
+}
