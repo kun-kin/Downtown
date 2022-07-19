@@ -41,16 +41,59 @@
                 ul {
                     padding: 24px 0;
                     li {
-                        margin-left: 62px;
-                        width: 75%;
-                        padding-left: 1.618em;
-                        border-bottom: 1px solid #365473;
                         a {
                             display: block;
                             text-transform: uppercase;
                             font-family: "Oswald", sans-serif;
                             color: #365473;
                             font-size: 4.25em;
+                            margin-left: 62px;
+                            width: 75%;
+                            padding-left: 1.618em;
+                            border-bottom: 1px solid #365473;
+                            i {
+                                float: right;
+                                margin-top: 10px;
+                            }
+                        }
+                        .drop-menu {
+                            position: absolute;
+                            top: 0;
+                            left: 0%;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #ffffff;
+                            transform: translateX(-100%);
+                            transition: all .3s ease;
+                            .back {
+                                color: #365473;
+                                display: block;
+                                font-size: 30px;
+                                text-transform: capitalize;
+                                padding-left: 30px;
+                                cursor: pointer;
+                                padding-top: 20px;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            // .back {
+                            //     font-size: 34px;
+                            //     color: red;
+                            //     width: 50px;
+                            //     height: 50px;
+                            //     margin-left: 40px;
+                            //     cursor: pointer;
+                            // }
+                            .submenu {
+                                padding: 0;
+                            }
+                        }
+                        &.current {
+                            .drop-menu {
+                                transform: translateX(0);
+                                transition: all .3s ease;
+                            }
                         }
                     }
                 }
